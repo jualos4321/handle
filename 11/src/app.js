@@ -10,6 +10,7 @@ app.engine('handlebars', handlebars.engine())
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
+
 app.use('/api/cart', cart)
 app.use('/api/product', product)
 

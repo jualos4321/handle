@@ -9,7 +9,7 @@ router.get('/', (req, res) =>{
 
     const limiting = req.query.limit
 
-    if(limiting = []){
+    if(limiting = 0){
         res.send(products)
        }else{
         res.send(products.slice(limiting))
