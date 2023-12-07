@@ -15,6 +15,11 @@ router.post('/', (req, res) =>{
   res.status(200).send({ data : newContent})
 })
 
+router.get('/:', (req,res) =>{
+  //?
+
+})
+
 
 router.get('/:cid', (req, res) =>{
   const ids = cart.map(cid)

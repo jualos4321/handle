@@ -1,4 +1,4 @@
-import { Router } from "express";
+import { Router, query } from "express";
 
 const products = []
 let id = 0
@@ -15,6 +15,19 @@ router.get('/', (req, res) =>{
         res.send(products.slice(limiting))
        }
    
+})
+
+router.get('/', (req,res) =>{
+    const limit = req.query.limit
+    const query = query.find()
+    if(limit = 0){
+        limit = 10
+        res.send(limit)
+       }else{
+        res.send(limit)
+       }
+{ $sort: {asc: 1} {desc: -1}}
+
 })
 
 router.get('/:pid', (req,res) =>{
